@@ -1,28 +1,26 @@
-+ 如何kill掉进程名包含某个字符串的一批进程:
+## 如何kill掉进程名包含某个字符串的一批进程:
 
     kill -9 $(ps -ef|grep swooleServ-9530|gawk '$0 !~/grep/ {print $2}' |tr -s '\n' ' ')
 
 
 
-+ 观测进程名包含某个字符串的进程详细信息:
+## 观测进程名包含某个字符串的进程详细信息:
 
     top -c -p $(ps -ef|grep swooleServ-9510|gawk '$0 !~/grep/ {print $2}' |tr -s '\n' ','|sed 's/,$/\n/')
 
 
-+ gawk 命令：
-
-* gawk是unix中原awk的gun版本。*
-
+## gawk 命令：
+* gawk是unix中原awk的gun版本
 * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能*
-1.$0　表示整行文本
-2.$1 表示文本中第1个数据字段
-3.$n 表示文本中第n个数据字段
+- $0　表示整行文本
+- $1 表示文本中第1个数据字段
+- $n 表示文本中第n个数据字段
 
 * gawk命令格式
-1.Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
-2.Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
+- Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
+- Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
 
-* gawk选项 *
+* gawk选项
         -F fs
             指定描绘一行中数据字段的文件分隔符
         -f file
@@ -36,13 +34,12 @@
         -W keyword
             指定gawk的兼容模式或警告级别
 
-**************************************************************************************
 
 ## Demo 1
 + $ cat test.log
-    One line in the test log
-    Two line of test log
-    Three line in test test
+-    One line in the test log
+-    Two line of test log
+-    Three line in test test
 
 + $ gawk '{print $1}' test.log
     One
@@ -66,8 +63,6 @@
    byebye
 
 
-******************************************************************************
-
 ## BEGIN关键字是在处理任何数据之前应用的命令
 * gawk数据字段和记录变量
         FIELDWIDTHS
@@ -88,7 +83,6 @@
     a#b#c
     a#b#c
 
-*********************************************************************************
 ## gawk内置变量
         ARGC
             出现的命令行参数的个数
