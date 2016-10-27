@@ -11,16 +11,18 @@
 
 + gawk 命令：
 
-    * gawk是unix中原awk的gun版本。
+* gawk是unix中原awk的gun版本。
     
-    * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能
-        ** $0　表示整行文本
-        ** $1 表示文本中第1个数据字段
-        ** $n 表示文本中第n个数据字段
-    * gawk命令格式
-        Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
-        Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
-    * gawk选项
+* 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能
+** $0　表示整行文本
+** $1 表示文本中第1个数据字段
+** $n 表示文本中第n个数据字段
+
+* gawk命令格式
+** Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
+** Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
+
+* gawk选项
         -F fs
             指定描绘一行中数据字段的文件分隔符
         -f file
@@ -38,22 +40,17 @@
 
 ## Demo 1
 + $ cat test.log
-
     One line in the test log
     Two line of test log
     Three line in test test
     
 + $ gawk '{print $1}' test.log
-
     One
-    
     Two
-    
     Three
 
 ## Demo 2
 + $ gawk -F: '{print $1}' /etc/passwd
-
     root
     daemon
     bin
@@ -67,10 +64,12 @@
     hello,,,        输入文本
     hello,,,        ctrl-D
     byebye
-    ## BEGIN关键字是在处理任何数据之前应用的命令
+    
+
 ******************************************************************************
 
-    * gawk数据字段和记录变量
+## BEGIN关键字是在处理任何数据之前应用的命令
+* gawk数据字段和记录变量
         FIELDWIDTHS
             以空格分隔的数字列表，用空格定义每个数据字段的精确宽度
         FS
@@ -83,17 +82,14 @@
             输出记录分隔符号
 ## Demo 4
 + $ cat data.log
-    144,2016-10-17 16:00:00,25,2016-10-17 16:00:00,131,2016-10-17 16:00:00
-    129,2016-10-16 16:00:00,19,2016-10-16 16:00:00,118,2016-10-16 16:00:00
-    65,2016-10-15 16:00:00,11,2016-10-15 16:00:00,61,2016-10-15 16:00:00
-    70,2016-10-14 16:00:00,8,2016-10-14 16:00:00,66,2016-10-14 16:00:00
+    a,b,c
+    a,b,c
 + $ gawk 'BEGIN{FS=",";OFS="#"} {print $1,$2,$3}' data.log
-    144 2016-10-17 16:00:00 25
-    129 2016-10-16 16:00:00 19
-    65 2016-10-15 16:00:00 11
-    70 2016-10-14 16:00:00 8
+    a#b#c
+    a#b#c
 
-    * gawk内置变量
+*********************************************************************************
+## gawk内置变量
         ARGC
             出现的命令行参数的个数
         ARGIND
