@@ -75,7 +75,7 @@ www-data 26890 26885  0 10月25 ?      00:00:02 nginx: worker process
 
 
 
-### Linux-gawk
+### 目录
 １、[gawk－简介](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-1.md "linux-gawk")
 
 ２、[gawk－基础语法](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-2.md "linux-gawk")

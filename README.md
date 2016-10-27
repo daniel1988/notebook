@@ -9,5 +9,7 @@
 
 ３、[gawk－运行、实例](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-3.md "linux-gawk")
 
+４、[linux-sed](https://github.com/daniel1988/notebook/blob/master/linux/linux-sed.md "linux-sed")
+
 ### Mysql
 １、[mysql-batch-update](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-batch-update.md)

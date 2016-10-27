@@ -33,7 +33,7 @@ Drs. A. Aho、P. Weinberger 和 B. Kernighan。因为 AWK 是一种文本处理�
     * 它具有更好的、更具描述性的错误消息。
     * 它包含一些 TCP/IP 网络函数
 
-### Linux-gawk
+### 目录
 １、[gawk－简介](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-1.md "linux-gawk")
 
 ２、[gawk－基础语法](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-2.md "linux-gawk")
