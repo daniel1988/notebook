@@ -12,6 +12,7 @@
 + gawk 命令：
 
     * gawk是unix中原awk的gun版本。
+    
     * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能
         ** $0　表示整行文本
         ** $1 表示文本中第1个数据字段
@@ -37,16 +38,22 @@
 
 ## Demo 1
 + $ cat test.log
+
     One line in the test log
     Two line of test log
     Three line in test test
+    
 + $ gawk '{print $1}' test.log
+
     One
+    
     Two
+    
     Three
 
 ## Demo 2
 + $ gawk -F: '{print $1}' /etc/passwd
+
     root
     daemon
     bin
