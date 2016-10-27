@@ -12,15 +12,15 @@
 ## gawk 命令：
 * gawk是unix中原awk的gun版本
 * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能*
-> $0　表示整行文本
-> $1 表示文本中第1个数据字段
-> $n 表示文本中第n个数据字段
+    * $0　表示整行文本
+    * $1 表示文本中第1个数据字段
+    * $n 表示文本中第n个数据字段
 
 * gawk命令格式
-> Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
-> Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
+    * Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
+    * Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
 
-* gawk选项
+* gawk选项:
         -F fs
             指定描绘一行中数据字段的文件分隔符
         -f file
