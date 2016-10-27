@@ -12,13 +12,13 @@
 ## gawk 命令：
 * gawk是unix中原awk的gun版本
 * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能*
-- $0　表示整行文本
-- $1 表示文本中第1个数据字段
-- $n 表示文本中第n个数据字段
+> $0　表示整行文本
+> $1 表示文本中第1个数据字段
+> $n 表示文本中第n个数据字段
 
 * gawk命令格式
-- Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
-- Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
+> Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
+> Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
 
 * gawk选项
         -F fs
@@ -36,31 +36,31 @@
 
 
 ## Demo 1
-+ $ cat test.log
--    One line in the test log
--    Two line of test log
--    Three line in test test
+* $ cat test.log
+>    One line in the test log
+>    Two line of test log
+>    Three line in test test
 
-+ $ gawk '{print $1}' test.log
-    One
-    Two
-    Three
+* $ gawk '{print $1}' test.log
+>   One
+>   Two
+>   Three
 
 ## Demo 2
-+ $ gawk -F: '{print $1}' /etc/passwd
-    root
-    daemon
-    bin
-    sys
-    sync
-    games
+* $ gawk -F: '{print $1}' /etc/passwd
+>    root
+>    daemon
+>   bin
+>    sys
+>    sync
+>    games
 
 ## Demo 3
 + $ gawk 'BEGIN {print "Hello World!"} {print $0} END {print "byebye"}'
-   Hello World!
-   hello,,,        输入文本
-   hello,,,        ctrl-D
-   byebye
+>   Hello World!
+>   hello,,,        输入文本
+>   hello,,,        ctrl-D
+>   byebye
 
 
 ## BEGIN关键字是在处理任何数据之前应用的命令
