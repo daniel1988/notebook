@@ -16,7 +16,7 @@
     * $1 表示文本中第1个数据字段
     * $n 表示文本中第n个数据字段
 
-* gawk命令格式
+## gawk命令格式
     * Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
     * Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
 
@@ -35,35 +35,40 @@
             指定gawk的兼容模式或警告级别
 
 ## Demo 1
-* $ cat test.log
->    One line in the test log
->    Two line of test log
->    Three line in test test
-
-* $ gawk '{print $1}' test.log
->   One
->   Two
->   Three
+```
+$ cat test.log
+    One line in the test log
+    Two line of test log
+    Three line in test test
+$ gawk '{print $1}' test.log
+   One
+   Two
+   Three
+```
 
 ## Demo 2
-* $ gawk -F: '{print $1}' /etc/passwd
->    root
->    daemon
->   bin
->    sys
->    sync
->    games
+```
+$ gawk -F: '{print $1}' /etc/passwd
+    root
+    daemon
+   bin
+    sys
+    sync
+    games
+```
 
 ## Demo 3
-+ $ gawk 'BEGIN {print "Hello World!"} {print $0} END {print "byebye"}'
->   Hello World!
->   hello,,,        输入文本
->   hello,,,        ctrl-D
->   byebye
+```
+$ gawk 'BEGIN {print "Hello World!"} {print $0} END {print "byebye"}'
+   Hello World!
+   hello,,,        输入文本
+   hello,,,        ctrl-D
+   byebye
+```
 
+    > ps: BEGIN关键字是在处理任何数据之前应用的命令
 
-## BEGIN关键字是在处理任何数据之前应用的命令
-* gawk数据字段和记录变量
+## gawk数据字段和记录变量
         FIELDWIDTHS
             以空格分隔的数字列表，用空格定义每个数据字段的精确宽度
         FS
@@ -75,12 +80,14 @@
         ORS
             输出记录分隔符号
 ## Demo 4
-+ $ cat data.log
+```
+$ cat data.log
     a,b,c
     a,b,c
-+ $ gawk 'BEGIN{FS=",";OFS="#"} {print $1,$2,$3}' data.log
+ $ gawk 'BEGIN{FS=",";OFS="#"} {print $1,$2,$3}' data.log
     a#b#c
     a#b#c
+```
 
 ## gawk内置变量
         ARGC
