@@ -1,4 +1,4 @@
-# GAWK详解
+# GAWK
 
 ## 简介
     GNU AWK (GAWK) 是历史悠久的 AWK 编程语言的开放源代码实现，可用于所有的 UNIX® 系统。
@@ -32,3 +32,10 @@ Drs. A. Aho、P. Weinberger 和 B. Kernighan。因为 AWK 是一种文本处理�
     * 它支持无限制的行长度和连续使用反斜杠字符 (\)。
     * 它具有更好的、更具描述性的错误消息。
     * 它包含一些 TCP/IP 网络函数
+
+### Linux-gawk
+１、[gawk－简介](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-1.md "linux-gawk")
+
+２、[gawk－基础语法](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-2.md "linux-gawk")
+
+３、[gawk－运行、实例](https://github.com/daniel1988/notebook/blob/master/linux/linux-gawk-3.md "linux-gawk")
