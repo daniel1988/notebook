@@ -1,13 +1,16 @@
 + 如何kill掉进程名包含某个字符串的一批进程:
+
     kill -9 $(ps -ef|grep swooleServ-9530|gawk '$0 !~/grep/ {print $2}' |tr -s '\n' ' ')
 
 
 
 + 观测进程名包含某个字符串的进程详细信息:
+
     top -c -p $(ps -ef|grep swooleServ-9510|gawk '$0 !~/grep/ {print $2}' |tr -s '\n' ','|sed 's/,$/\n/')
 
 
 + gawk 命令：
+
     * gawk是unix中原awk的gun版本。
     * 主要功能是处理文件文件中数据的能力　，通过自动将变量分配给第行中的每个数据元素实现这一功能
         ** $0　表示整行文本
@@ -31,7 +34,8 @@
             指定gawk的兼容模式或警告级别
 
 **************************************************************************************
-    * Demo 1
+
+## Demo 1
 + $ cat test.log
     One line in the test log
     Two line of test log
@@ -41,7 +45,7 @@
     Two
     Three
 
-    # Demo 2
+## Demo 2
 + $ gawk -F: '{print $1}' /etc/passwd
     root
     daemon
@@ -50,7 +54,7 @@
     sync
     games
 
-    # Demo 3
+## Demo 3
 + $ gawk 'BEGIN {print "Hello World!"} {print $0} END {print "byebye"}'
     Hello World!
     hello,,,        输入文本
@@ -70,7 +74,7 @@
             输出字段分隔符号
         ORS
             输出记录分隔符号
-    # Demo 4
+## Demo 4
 + $ cat data.log
     144,2016-10-17 16:00:00,25,2016-10-17 16:00:00,131,2016-10-17 16:00:00
     129,2016-10-16 16:00:00,19,2016-10-16 16:00:00,118,2016-10-16 16:00:00
