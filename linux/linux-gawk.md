@@ -20,7 +20,7 @@
     * Usage: gawk [POSIX or GNU style options] -f progfile [--] file ...
     * Usage: gawk [POSIX or GNU style options] [--] 'program' file ...
 
-* gawk选项:
+## gawk选项
         -F fs
             指定描绘一行中数据字段的文件分隔符
         -f file
@@ -33,7 +33,6 @@
             指定数据文件中的最大记录大小
         -W keyword
             指定gawk的兼容模式或警告级别
-
 
 ## Demo 1
 * $ cat test.log
