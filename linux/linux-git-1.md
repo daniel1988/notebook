@@ -66,7 +66,7 @@ $ git push origin --tags    #推送所有tag到远程
 
 ## Git 工具
 
-* Git自动补全
+### Git自动补全
 
 ```
 cd ~
@@ -80,7 +80,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 ```
 
-* Git忽略文件
+### Git忽略文件
 
 .gitignore
 ```
@@ -91,16 +91,16 @@ fi
 .tags_sorted_by_file
 ```
 
-* git blame [file_name]
+### git blame [file_name]
 
-* git log
+### git log
 ```
  --oneline 压缩模式，在每个提交的旁边显示经过精简的提交哗然码和提交信息，以一行显示
  --graph 图开模式，
  --all 显示所有分支的历史记录
 ```
 
-* 压缩多个commit
+### 压缩多个commit
 
 `git rebase -i HEAD~[number_of_commits]`
 
@@ -109,14 +109,14 @@ fi
 $ git rebase -i HEAD~2
 ```
 
-* git stash
+### git stash
 
-* git cherry-pick
+### git cherry-pick
     cherry-pick就是从不同的分支中捡出一个单独的commit，并把它和你当前的分支合并。
 `git cherry-pick [commit_hash]`
 
 
-* 清空本地分支
+### 清空本地分支
 ```
 git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print\n$1}' | xargs git branch -d
 ```
