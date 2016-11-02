@@ -24,7 +24,7 @@ SELECT b.uid AS uid,a.encrypted_bank_card_id AS encrypt_bank_card_id ,
     a.encrypted_phone AS encrypt_phone ,a.encrypted_contract_no AS encrypt_contract_no,
     b.email_safe AS encrypt_email,b.phone_safe AS encrypt_86_phone,c.encrypted_name AS encrypt_name,
     c.encrypted_identity_id AS encrypt_identity_id
-FROM t_formax_user_info as b
+FROM t_xx_user_info as b
 LEFT JOIN t_bank_card_pay_info as a on b.uid=a.uid
 LEFT JOIN t_user_base_info as c on b.uid=c.uid;
 ```

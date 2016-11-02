@@ -1,7 +1,7 @@
 方案１：
-danielluo@danielluo:/tmp$ mysql -uroot -proot -e"use formax_p2p;show tables;"
+danielluo@danielluo:/tmp$ mysql -uroot -proot -e"use xx_p2p;show tables;"
 +----------------------+
-| Tables_in_formax_p2p |
+| Tables_in_xx_p2p |
 +----------------------+
 | p2p_staff            |
 | p2p_staff_salary     |
@@ -36,8 +36,8 @@ FROM_UNIXTIME(G.distribute_create_time) AS dis_time, D.user_id, D.realname
 FROM fos_crm.presale_distribute_customer A
     LEFT JOIN fos_crm.presale_project B ON A.project_id = B.project_id
     LEFT JOIN fos_crm.presale_activity C ON A.activity_id=C.activity_id
-    LEFT JOIN formax_newcrm.sales D ON A.user_in_charge=D.user_id
-    LEFT JOIN formax_newcrm.customers F ON A.customer_uid=F.uid
+    LEFT JOIN xx_newcrm.sales D ON A.user_in_charge=D.user_id
+    LEFT JOIN xx_newcrm.customers F ON A.customer_uid=F.uid
     LEFT JOIN fos_crm.presale_distribute G ON A.distribute_id = G.distribute_id
 LIMIT 10;
 
