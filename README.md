@@ -11,5 +11,13 @@
 
 ４、[linux-sed](https://github.com/daniel1988/notebook/blob/master/linux/linux-sed.md "linux-sed")
 
+### linux-tcpdump
+
+1、[tcpdump-redis实例](https://github.com/daniel1988/notebook/blob/master/linux/linux-tcpdump-1.md "linux-tcpdump")
+
+2、[tcpdump-nginx](https://github.com/daniel1988/notebook/blob/master/linux/linux-tcpdump-2.md "linux-tcpdump")
+
+3、[参数选项](https://github.com/daniel1988/notebook/blob/master/linux/linux-tcpdump-3.md "linux-tcpdump")
+
 ### Mysql
 １、[mysql-batch-update](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-batch-update.md)

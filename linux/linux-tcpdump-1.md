@@ -7,6 +7,7 @@
 * eth0, eth1...分别代表网卡1、网卡2
 
 > 抓取本机Redis set foo hello
+
 ```
 $ sudo tcpdump -i lo -A -s2000 port 6379
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
