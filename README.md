@@ -21,6 +21,8 @@
 
 ### Mysql
 
-[Mysql 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-1.md)
-[InnoDB 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-2.md)
-１、[mysql-batch-update](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-batch-update.md)
+1、[Mysql 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-1.md)
+
+2、[InnoDB 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-2.md)
+
+3、[mysql-batch-update](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-batch-update.md)
