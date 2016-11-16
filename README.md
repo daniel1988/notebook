@@ -20,4 +20,7 @@
 3、[参数选项](https://github.com/daniel1988/notebook/blob/master/linux/linux-tcpdump-3.md "linux-tcpdump")
 
 ### Mysql
+
+[Mysql 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-1.md)
+[InnoDB 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-2.md)
 １、[mysql-batch-update](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-batch-update.md)
