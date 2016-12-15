@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+try {
+    var socket = new WebSocket('ws://localhost:9502');
+    // 打开Socket
+    socket.onopen = function(event) {
+
+        console.log( this.readyState ) ;
+
+      // 发送一个初始化消息
+        socket.send("Hello swoole server" + event);
+    };
+
+    // 监听消息
+    socket.onmessage = function(event) {
+        console.log('Client received a message',event);
+    };
+
+    // 监听Socket的关闭
+    socket.onclose = function(event) {
+        console.log('Client notified socket has closed',event);
+    };
+
+    // 关闭Socket....
+    //socket.close()
+} catch( e ) {
+    console.log(e);
+}
+</script>
