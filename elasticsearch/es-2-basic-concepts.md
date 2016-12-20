@@ -59,3 +59,5 @@ logging-stage、logging-prod来开发、测试与线上生产环境的集群
 # 注
 > 每个Elasticsearch 碎片都是一个Lucene索引。一个Lucene索引最大拥有的文件数量是：　Lucene-5843  2,147,483519(=Integer.MAX_VALUE - 128)个<br>
 可以用碎片监控api查看：　_cat/shards
+
+[目录](https://github.com/daniel1988/notebook/tree/master/elasticsearch/readme.md)
