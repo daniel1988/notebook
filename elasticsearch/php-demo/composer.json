@@ -1,0 +1,13 @@
+{
+
+    "repositories" : [
+        {
+            "url": "https://github.com/elastic/elasticsearch-php.git",
+            "type": "git"
+        }
+    ],
+
+    "require": {
+        "elasticsearch/elasticsearch": "2.0"
+    }
+}
