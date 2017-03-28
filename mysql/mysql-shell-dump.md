@@ -46,3 +46,8 @@ mysql -uroot -proot < fos_crm.sql
 导入数据到csv:
 mysql -uroot -proot < fos_crm.sql >fos_crm.csv
 
+
+方案４：
+
+echo "set names utf8; select * from tbl_1;" | mysql -h127.0.0.1 -uroot -proot > xx.csv
+
