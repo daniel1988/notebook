@@ -28,6 +28,7 @@ Xhprof
     * 把xhprof_lib/utils/config.sample.php 重命名为config.php
 
 3、demo
+```
 <?php
 
 function bar($x) {
@@ -74,7 +75,7 @@ $run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
 echo '<hr>' ;
 echo "<a href='xhprof_html/index.php?run=$run_id&source=xhprof_foo'>show xhprof...</a>\n" ;
 echo '<hr>' ;
-
+```
 
 
 
