@@ -63,6 +63,7 @@ git clone git@localhost:/home/gitrepository/gitosis-admin.git
 
 ```
 git clone git@120.77.38.187:/home/gitrepository/poker.api.com.git
+
 ```
 
 
