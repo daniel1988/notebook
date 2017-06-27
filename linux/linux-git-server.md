@@ -62,7 +62,9 @@ git clone git@localhost:/home/gitrepository/gitosis-admin.git
 ## demo
 
 ```
-git clone git@120.77.38.187:/home/gitrepository/poker.api.com.git
+cd /home/gitrepository && mkdir test.git
+git --bare init #创建空项目　
+git clone git@120.77.38.187:/home/gitrepository/test.git
 
 ```
 
