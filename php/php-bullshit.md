@@ -1,4 +1,5 @@
-# php-bullshit
+# php-interview-bullshit
+
 
 
 ## HTTP 请求
@@ -77,11 +78,20 @@ RDB与AOF
 
 * MongoDB、TT(略)
 
-## Linux常用命令[参考](https://github.com/daniel1988/notebook/tree/master/linux)
+## Linux常用命令
+
+[参考](https://github.com/daniel1988/notebook/tree/master/linux)
+
+[Shell demo](https://github.com/daniel1988/notebook/tree/master/shell-test)
 
 ## 前端
 
 总结的不多[仅供参考](https://github.com/daniel1988/notebook/tree/master/html5)
+
+
+## 其它语言
+
+技多不压身，艺多不养人。
 
 
 
