@@ -67,4 +67,4 @@
 
 [zephir简介](https://github.com/daniel1988/notebook/blob/master/php/zephir/zephir-1.md)
 
-[流浪剑客这下牛B了之php-bullshit](https://github.com/daniel1988/notebook/blob/master/php/php-bullshit.md)
+[php-interview-bullshit](https://github.com/daniel1988/notebook/blob/master/php/php-bullshit.md)
