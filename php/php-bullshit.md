@@ -54,6 +54,18 @@ web服务收到请求，通过解析HTTP头信息，得到相应的请求uri，�
 
 fast-cgi，php-fpm
 
+* php并行方式与实现
+
+1、curl_multi请求，直接由php-fpm或者fast-cgi来管理
+
+2、调用系统函数执行php文件
+```
+php -f xxoo.php &
+```
+
+3、使用拓展如pcntl、swoole等
+
+
 ## Mysql
 
 * SQL、索引优化(略)
