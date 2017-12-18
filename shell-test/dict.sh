@@ -21,5 +21,7 @@ for key in $(echo ${!dict[*]})
     done
 
 
-key="red"
+key="green"
 echo -e "key------>" ${dict[$key]}
+
+

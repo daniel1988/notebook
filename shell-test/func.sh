@@ -7,4 +7,10 @@ curl_info(){
     return $sum
 }
 
+hello() {
+    echo "hello world"
+}
+
+hello
+
 curl_info 1 2
