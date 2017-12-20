@@ -52,7 +52,7 @@ useradd www-data -s /sbin/nologin -M
 
 
 ```
-./configure --prefix=/usr/local/php7 --with-config-file-path=/usr/local/php7/etc --enable-opcache --enable-fpm --enable-pdo --enable-sockets --enable-exif --enable-soap --enable-ftp --enable-wddx --enable-pcntl --enable-soap --enable-bcmath --enable-mbstring --enable-dba --enable-gd-native-ttf --enable-gd-jis-conv --enable-zip --enable-calendar --enable-shmop --enable-sysvmsg --enable-sysvsem --enable-sysvshm --with-mysqli --with-pdo-mysql --with-pdo-sqlite --with-iconv --with-gettext --with-xmlrpc --with-openssl --with-curl --with-pcre-regex --with-gd --with-pear --with-fpm-user=www-data --with-fpm-group=www-data
+./configure --prefix=/usr/local/php7 --with-config-file-scan-dir=/usr/local/php5.6/etc --with-config-file-path=/usr/local/php7/etc --enable-opcache --enable-fpm --enable-pdo --enable-sockets --enable-exif --enable-soap --enable-ftp --enable-wddx --enable-pcntl --enable-soap --enable-bcmath --enable-mbstring --enable-dba --enable-gd-native-ttf --enable-gd-jis-conv --enable-zip --enable-calendar --enable-shmop --enable-sysvmsg --enable-sysvsem --enable-sysvshm --with-mysqli --with-pdo-mysql --with-pdo-sqlite --with-iconv --with-gettext --with-xmlrpc --with-openssl --with-curl --with-pcre-regex --with-gd --with-pear --with-fpm-user=www-data --with-fpm-group=www-data
 
 sudo make && make install
 
