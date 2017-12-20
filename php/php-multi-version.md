@@ -32,6 +32,36 @@ sudo ln -s /usr/bin/php /usr/local/bin/php
 > 相应的phpize  php-config等也需要修改
 
 
+## 源码安装
+
+[下载](http://php.net/downloads.php)
+
+* 创建用户
+
+```
+useradd www-data -s /sbin/nologin -M
+```
+
+* 配制
+
+
+```
+./configure --prefix=/usr/local/php5.6 --with-config-file-scan-dir=/usr/local/php5.6/etc --with-config-file-path=/usr/local/php5.6/etc --enable-opcache --enable-fpm --enable-pdo --enable-sockets --enable-exif --enable-soap --enable-ftp --enable-wddx --enable-pcntl --enable-soap --enable-bcmath --enable-mbstring --enable-dba --enable-gd-native-ttf --enable-gd-jis-conv --enable-zip --enable-calendar --enable-shmop --enable-sysvmsg --enable-sysvsem --enable-sysvshm --with-mysqli --with-pdo-mysql --with-pdo-sqlite --with-iconv --with-gettext --with-xmlrpc --with-openssl --with-curl --with-pcre-regex --with-gd --with-pear --with-fpm-user=www-data --with-fpm-group=www-data
+
+```
+
+
+```
+./configure --prefix=/usr/local/php7 --with-config-file-path=/usr/local/php7/etc --enable-opcache --enable-fpm --enable-pdo --enable-sockets --enable-exif --enable-soap --enable-ftp --enable-wddx --enable-pcntl --enable-soap --enable-bcmath --enable-mbstring --enable-dba --enable-gd-native-ttf --enable-gd-jis-conv --enable-zip --enable-calendar --enable-shmop --enable-sysvmsg --enable-sysvsem --enable-sysvshm --with-mysqli --with-pdo-mysql --with-pdo-sqlite --with-iconv --with-gettext --with-xmlrpc --with-openssl --with-curl --with-pcre-regex --with-gd --with-pear --with-fpm-user=www-data --with-fpm-group=www-data
+
+sudo make && make install
+
+
+```
+
+```
+sudo ln -s /data/php7/bin/php /usr/local/bin/php7
+```
 
 
 
