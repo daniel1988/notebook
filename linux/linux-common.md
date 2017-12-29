@@ -22,3 +22,10 @@ netstat -n | grep tcp | grep 80 | wc -l
 ```
 cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 ```
+
+
+# 查找git文件并删除
+
+```
+find . -name .git* | xargs rm -rf
+```

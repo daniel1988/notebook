@@ -15,6 +15,7 @@ dict=(
 
 echo -e ${dict["red"]}
 
+
 for key in $(echo ${!dict[*]})
     do
         echo -e "$key : ${dict[$key]}"
