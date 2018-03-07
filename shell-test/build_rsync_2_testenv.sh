@@ -7,8 +7,8 @@ build_rsync_2_t0102() {
     t0102_srv_list=("ApnsEventCenter" "ApnsService" "MsgBroker" "XiaoMiPush" "Comet")
     for srv in ${t0102_srv_list[@]};do
         srv_dir="${ROOT}${srv}"
-        echo "cd ${srv_dir} && go build && rsync -avP ${srv} t0102.eformax.com::temp"
-        cd ${srv_dir} && go build && rsync -avP ${srv} t0102.eformax.com::temp
+        echo "cd ${srv_dir} && go build && rsync -avP ${srv} xxx.ooo.com::temp"
+        cd ${srv_dir} && go build && rsync -avP ${srv} xxx.ooo.com::temp
         if [ $? -eq 0 ];then
             echo -e "\033[32m${srv} update success\033[0m  \n+++++++++++++++++++++++++++++++++++++++++++++++++\n"
         else
@@ -23,8 +23,8 @@ build_rsync_2_t0110() {
     t0102_srv_list=("PushApi" "Comet")
     for srv in ${t0102_srv_list[@]};do
         srv_dir="${ROOT}${srv}"
-        echo "cd ${srv_dir} && go build && rsync -avP ${srv} t0110.eformax.com::temp"
-        cd ${srv_dir} && go build && rsync -avP ${srv} t0110.eformax.com::temp
+        echo "cd ${srv_dir} && go build && rsync -avP ${srv} xxx.ooo.com::temp"
+        cd ${srv_dir} && go build && rsync -avP ${srv} xxx.ooo.com::temp
         if [ $? -eq 0 ];then
             echo -e "\033[32m${srv} update success\033[0m  \n+++++++++++++++++++++++++++++++++++++++++++++++++\n"
         else
