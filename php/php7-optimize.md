@@ -1,15 +1,15 @@
 
 ## 新增特性和改变
 
-* 1. 标量类型和返回类型声明
+### 1. 标量类型和返回类型声明
 
 `declare(strict_type=1)`开启时,会强制当前文件下的程序遵循严格的函数类型和返回类型
 
-* 2. 更多的Error变为可捕获的Exception
+### 2. 更多的Error变为可捕获的Exception
 
 php7实现了一个全局的throwable接口,原来的Exception和部分的Error都实现了这个接口
 
-* 3. AST(Abstract Syntax Tree) 抽象语法树
+### 3. AST(Abstract Syntax Tree) 抽象语法树
 
 AST在php编译过程作为一个中间件的角色,替换原来直接从解释器吐出opcode的方式,让解释器(parser)和编译器(compliler)解耦
 可以减少一些hack代码,同时,让实现更容易理解和可维护
@@ -24,9 +24,9 @@ php7
 php代码 --> Parser --> AST --> opcode --> 执行
 ```
 
-* 4. Native TLS(native thread local storage) 原生线程本地存储
+### 4. Native TLS(native thread local storage) 原生线程本地存储
 
-* 5. 其他新特性
+### 5. 其他新特性
 
 - int64支持, 统一不同平台下的整形长度,字符串和文件上传都支持大于2GB
 - 统一变量语法
@@ -37,7 +37,7 @@ php代码 --> Parser --> AST --> opcode --> 执行
 
 ## 跨越式的性能突破
 
-* 1. JIT与性能
+### 1. JIT与性能
 
 just in time (即时编译) 是一种软件优化技术,指在运行时才会去编译字节码. 从直觉出发,我们都很容易认为,机器码
 是计算机能够直接识别和执行的,比起zend读取opcode逐条执行效率会更高.基中hhvm就是采用了JIT,让性能提升了一个数量级
@@ -65,12 +65,12 @@ php代码---> Parser ---> opcode --> typeInf ---> JIT ---> ByteCodes ---> 执行
 并不在VM上,因上JIT优化计划,最后没有被列入php7的特性中,不过很有可能会在更后面的版本中实现
 
 
-* 2. Zval的改变
+### 2. Zval的改变
 
 php7中zval内存占16个字节，而php5中占据24个字节
 
 
-* 3. 内部类型zend_string
+### 3. 内部类型zend_string
 
 zend_string是实际存储字符串的结构体，实际的内容会存储在val(char, 字符中), 而val是一个char数组，长度为1．而不是char*
 这里有一个小优化技巧，可以降低cpu的cache miss
@@ -78,7 +78,7 @@ zend_string是实际存储字符串的结构体，实际的内容会存储在val
 > 如果是使用char数组，当Malloc申请上述结构体内存，是申请在同一片区域的，通常是长度是sizeof(_zend_string)+实际char存储
 空间．但是如果使用char* ，那这个位置存储的是一个指针，真实的存储又在另外一片独立的内存区域内．
 
-* 4. php数组的变化(hash table 和zend array)
+### 4. php数组的变化(hash table 和zend array)
 
 hashtable 存储的值需要指针跳转，有可能会导致cpu读取时，不在同一级缓存中而产生cpu cache miss .
 
@@ -94,7 +94,7 @@ cpu cache miss
 6. 数组元素的value被嵌入到Bucket中
 7. 降低cpu cache miss
 
-* 5. 函数调用机制
+### 5. 函数调用机制
 
 php7改进了函数的调用机制，通过优化参数传递的环节，减少了一些指令，提高执行效率．
 
