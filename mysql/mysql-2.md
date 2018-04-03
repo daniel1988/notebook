@@ -104,7 +104,8 @@ mysql> show variables like'innodb_%io%';
 
 * innoDB内存管理是通过一种称为内存堆的方式进行管理的。在对一些数据结构本身分配内存时，需要从额外的内存池中申请
 
-* InnoDB存储引擎内存是由：缓存池、重做日志缓冲池、额外内存池分别配置文件的参数innodb_buffer_pool_size和innodb_log_buffer_size的大小决定
+* InnoDB存储引擎内存是由：缓存池、重做日志缓冲池、额外内存池分别配置文件的参数innodb_buffer_pool_size和
+innodb_log_buffer_size的大小决定
 
 ```
 mysql> show variables like '%innodb_%_pool_size';
@@ -120,8 +121,8 @@ mysql> show variables like '%innodb_%_pool_size';
 脏页刷新到文件中。可以通过show engine innodb status 来查看innodb_buffer_pool 的具体情况
 
 * 缓存池：
-    数据页类型有：索引页、数据页、undo页、插入缓冲（insert buffer）、自适应哈希索引（adaptive hash index ）、InnoDB存储的锁信息、
-    数据字典信息等
+    数据页类型有：索引页、数据页、undo页、插入缓冲（insert buffer）、自适应哈希索引（adaptive hash index ）、
+    InnoDB存储的锁信息、数据字典信息等
 
 
 
