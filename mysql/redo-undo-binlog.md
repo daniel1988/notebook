@@ -40,7 +40,7 @@ mysqlbinlog功能是将mysql的binlog日志转化为mysql语句，默认情况�
 * 2. Statement level (默认)
 
 每一条被修改数据的sql都会记录到Master的bin-log中，slave在提制的时候sql进程会解析成和原来master端执行过的相同sql再次执行
-优点：了row level下的缺点，不需要记录每一行数据变化，减少了bin-log日志量，节约磁盘io
+优点：弥补了row level下的缺点，不需要记录每一行数据变化，减少了bin-log日志量，节约磁盘io
 缺点：容易出现主从提制不一致
 
 * 3. Mixed(混合模式)
