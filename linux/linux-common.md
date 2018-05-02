@@ -29,3 +29,7 @@ cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 ```
 find . -name .git* | xargs rm -rf
 ```
+
+## kill
+
+kill $(ps -ef | grep xxx | grep -v "xxx" | awk '{print $2}' | tr "\n" " ")
