@@ -1,0 +1,59 @@
+## ubuntu 16.04 java 
+
+```
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+
+sudo apt-get install oracle-java8-installer
+```
+
+
+## apktool [install](https://ibotpeaches.github.io/Apktool/install/)
+
+* gen shell `apktool` [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool)
+
+* download latest [apktool_2.3.3.jar](https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.3.3.jar)
+
+```
+sudo mv apktool /usr/local/bin 
+sudo mv apktool.jar /usr/local/bin
+```
+
+## TEST
+
+```
+apktool d xxx.apk 
+I: Using Apktool 2.3.3 on xxx.apk
+I: Loading resource table...
+I: Decoding AndroidManifest.xml with resources...
+S: WARNING: Could not write to (/home/danielluo/.local/share/apktool/framework), using /tmp instead...
+S: Please be aware this is a volatile directory and frameworks could go missing, please utilize --frame-path if the default storage directory is unavailable
+I: Loading resource table from file: /tmp/1.apk
+I: Regular manifest package...
+I: Decoding file-resources...
+I: Decoding values */* XMLs...
+I: Baksmaling classes.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+```
+
+```
+apktool b xxx ooo.apk 
+I: Using Apktool 2.3.3
+I: Checking whether sources has changed...
+I: Smaling smali folder into classes.dex...
+I: Checking whether resources has changed...
+I: Building resources...
+S: WARNING: Could not write to (/home/danielluo/.local/share/apktool/framework), using /tmp instead...
+S: Please be aware this is a volatile directory and frameworks could go missing, please utilize --frame-path if the default storage directory is unavailable
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk...
+```
+
+
+
+
+
