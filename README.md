@@ -1,5 +1,8 @@
 # notebook
-文档、笔记
+| Align Center | LEFT | RIGHT |
+|:------------:|:-----|-----:|
+| Align Center | LEFT | RIGHT |
+
 
 ### Linux
 
@@ -11,11 +14,9 @@
 
 [linux-sed](linux/linux-sed.md "linux-sed")
 
-| GIT | DESC |
-|:------------:|:-------------------------------------|
-| [ubuntu git server](linux/linux-git-server.md) | ubuntu git server |
-| [git 基本操作与设置](linux/linux-git-1.md) | 基本操作与设置 |
-| [gitlab](linux/linux-gitlab.md) | ubuntu gitlab搭建 |
+[ubuntu git server](linux/linux-git-server.md)
+[git 基本操作与设置](linux/linux-git-1.md)
+[gitlab](linux/linux-gitlab.md)
 
 
 
