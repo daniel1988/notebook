@@ -33,6 +33,10 @@
 
 [tcpdump-参数选项](https://github.com/daniel1988/notebook/blob/master/linux/linux-tcpdump-3.md "linux-tcpdump")
 
+[ubuntu-sublime-settings](linux/ubuntu-sublime.md)
+
+[ubuntu-apktool](ubuntu-apktool.md)
+
 ### Mysql
 
 [Mysql 结构](https://github.com/daniel1988/notebook/blob/master/mysql/mysql-1.md)
