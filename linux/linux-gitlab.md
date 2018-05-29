@@ -48,3 +48,39 @@ sudo gitlab-ctl stop
 sudo gitlab-ctl start
 
 ```
+
+
+
+## 备份与迁移
+
+* 创建备份
+
+```
+gitlab-rake gitlab:backup:create
+```
+
+> 备份目录在`/var/opt/gitlab/backups`
+
+* 自动备份
+
+```
+sudo su
+crontab -e
+
+0 2 * * * /opt/gitlab/bin/gitlab-rake gitlab:backup:create
+
+```
+
+* 恢复
+
+```
+# 停止相关数据连接服务
+gitlab-ctl stop unicorn
+gitlab-ctl stop sidekiq
+
+# 从1393513186编号备份中恢复
+gitlab-rake gitlab:backup:restore BACKUP=1393513186
+
+# 启动Gitlab
+sudo gitlab-ctl start
+```
