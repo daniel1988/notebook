@@ -63,3 +63,42 @@ sudo systemctl start lightdm
 ```
 sudo systemctl set-default graphical.target
 ```
+
+
+## Ubuntu 与windows双系统硬盘挂载bug
+
+`/etc/fstab`挂载了三个盘到相应目录， 当在windows运行久时会留下一些metadata数据，导致ubuntu启动有问题。主要原因就是挂载以下
+的目录不兼容
+
+```
+UUID=BA12499812495B11 /data ntfs defaults 0 1
+UUID=849A41F69A41E570 /e ntfs defaults 0 1
+UUID=FEBC45DABC458E59 /f ntfs defaults 0 1
+
+
+/dev/sda2       305G   31G  275G   10% /e
+/dev/sda4       306G   25G  282G    8% /data
+/dev/sda3       305G  9.4G  296G    4% /f
+
+```
+* Step 1
+
+注释以上相应的挂载，重新启动. 如果知道挂载的分区即可直接运行`ntfsfix /dev/sdb4`修复
+
+* Step 2
+
+```
+fdisk -l
+/dev/sdb1       2048    204799    202752   99M EFI System
+/dev/sdb2     204800    466943    262144  128M Microsoft reserved
+/dev/sdb3     466944   2564095   2097152    1G Microsoft basic data
+/dev/sdb4    2564096 167095090 164530995 78.5G Microsoft basic data
+/dev/sdb5  167096320 168798207   1701888  831M Windows recovery environment
+/dev/sdb6  168800256 233502719  64702464 30.9G Linux filesystem
+/dev/sdb7  233502720 250068991  16566272  7.9G Linux swap
+
+```
+
+`blkid` 查看相应的uuid对应的挂载分区
+
+> `ntfsfix /dev/sdb4` 修复相应分区，再重启系统
