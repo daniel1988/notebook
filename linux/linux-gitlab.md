@@ -12,12 +12,14 @@ curl -sS http://packages.gitlab.cc/install/gitlab-ce/script.deb.sh | sudo bash
 sudo apt-get install gitlab-ce
 ```
 
-> 太慢的话，可以直接下载安装包
+> 太慢的话，可以直接下载安装包.
 
 ```
-curl -LJO https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/gitlab-ce-XXX.deb
-dpkg -i gitlab-ce-XXX.deb
+curl -LJO https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/gitlab-ce_10.8.4-ce.0_amd64.deb
+dpkg -i gitlab-ce_10.8.4-ce.0_amd64.deb
 ```
+
+
 
 
 ## 配置gitlab `/etc/gitlab.rb`
