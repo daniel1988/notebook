@@ -102,3 +102,19 @@ fdisk -l
 `blkid` 查看相应的uuid对应的挂载分区
 
 > `ntfsfix /dev/sdb4` 修复相应分区，再重启系统
+
+
+
+## ubuntu16.04 启动时黑屏
+
+* 使用 ctrl + alt + F1 进入命令行模式
+
+* 修改`/etc/default/grub`文件
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+修改为
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+```
